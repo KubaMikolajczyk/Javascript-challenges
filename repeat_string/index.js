@@ -44,3 +44,21 @@ repeatStringNumTimes("abc", -2) should return "".
     console.log(repeatStringNumTimes('lol', 3));
     console.log(repeatStringNumTimes('lol', -1));
 }
+
+{
+    //USING RECURSION
+    
+    function repeatStringNumTimes(str, times) {
+        
+        if (times < 0){
+            return ""
+        } else if (times === 1) {
+            return str;
+        } else {
+            return str + repeatStringNumTimes(str, times-1);
+        }
+    }
+    
+    console.log(repeatStringNumTimes('lol', 3));
+    console.log(repeatStringNumTimes('lol', -1));
+}
