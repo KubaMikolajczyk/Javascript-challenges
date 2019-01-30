@@ -29,3 +29,18 @@ repeatStringNumTimes("abc", -2) should return "".
     console.log(repeatStringNumTimes("abc", 3));
     
 }
+
+{
+    //USING ES6 REPEAT
+    
+    function repeatStringNumTimes(str, times) {
+        
+        if (times > 0) {
+            return str.repeat(times);
+        }
+        return "";
+    }
+    
+    console.log(repeatStringNumTimes('lol', 3));
+    console.log(repeatStringNumTimes('lol', -1));
+}
