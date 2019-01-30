@@ -48,3 +48,21 @@ reverseString(“Greetings from Earth”) should return”htraE morf sgniteerG�
     console.log(reverseString("Greetings from Earth"))
 }
 
+{
+    // REVERSRE ONLY SECOND WORD
+    
+    function reverseString(str) {
+        
+        let newArr = str.split(" ");
+        
+        let splitSecStr = newArr[1].split("");
+        
+        let reverseSecStr = splitSecStr.reverse();
+        
+        newArr[1] = reverseSecStr.join("");
+        
+        return newArr.join(" ");
+    }
+    
+    console.log(reverseString("Hey there"));
+}
