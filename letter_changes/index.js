@@ -9,21 +9,24 @@
 //
 //Output:"gvO Ujnft!"
 
-let sample1 = "hello*3"
-let sample2 = "fun times!"
+{
+    let sample1 = "hello*3"
+    let sample2 = "fun times!"
 
-function LetterChanges(str){
-    
-    let conversion = str.replace(/[a-z]/gi, function(char) {
-        return ('z' === char || 'Z' === char) ? 'a' : String.fromCharCode(char.charCodeAt() + 1);
-    })
-    
-    let resize = conversion.replace(/a|e|o|u|i/gi, function(vowel) {
-        return vowel.toUpperCase();
-    })
-    
-    return resize;
+    function LetterChanges(str){
+
+        let conversion = str.replace(/[a-z]/gi, function(char) {
+            return ('z' === char || 'Z' === char) ? 'a' : String.fromCharCode(char.charCodeAt() + 1);
+        })
+
+        let resize = conversion.replace(/a|e|o|u|i/gi, function(vowel) {
+            return vowel.toUpperCase();
+        })
+
+        return resize;
+    }
+
+    console.log(LetterChanges(sample1));
+    console.log(LetterChanges(sample2));
 }
 
-console.log(LetterChanges(sample1));
-console.log(LetterChanges(sample2));
