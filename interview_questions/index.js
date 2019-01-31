@@ -71,3 +71,20 @@
 }
 
 //--------------------------------
+
+//Explain what a callback function is and provide a simple example.
+
+//A callback function is a function that is passed as an argument into another function and is executed after some operation is completed
+
+{
+    function sayHeyCapitalize(str, callback) {
+        let newStr = str.split("");
+        let capitalize = newStr[0].toUpperCase();
+        newStr[0] = capitalize;
+        callback(newStr.join(""));
+    }
+    
+    sayHeyCapitalize('ania', function(str){
+        console.log("howdy, " + str);
+    })
+}
