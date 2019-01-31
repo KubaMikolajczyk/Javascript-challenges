@@ -88,3 +88,41 @@
         console.log("howdy, " + str);
     })
 }
+
+//--------------------------------
+
+//What will the following code output?
+
+//0.1+0.2 === 0.3
+
+// this is tricky because of floating points error in internally representing certain numbers. In fact 0.1 + 0.2 would be around 0.3000000004 - so we should perform this operation on decimal.
+
+//--------------------------------
+
+// How to create a private variable in JS?
+
+// if you want to create a private variable you should put it inside a function 
+
+{
+    function private(){
+        let str = "really private";
+    }
+    
+    //console.log(str)  ---- this will throw an error
+}
+
+// if we want to recover a private variable from that function we should create a getter 
+
+{
+    function private(){
+        let str = "really private";
+        return function() {
+            return str;
+        }
+    }
+    
+    let getPrivate = private();
+    console.log(getPrivate());
+}
+
+//--------------------------------
